@@ -41,7 +41,7 @@ export default function Home() {
       {isLoading && <LoadingSpinner />}
       <div className="grid md:grid-cols-3 gap-4">
         {recipes.length > 0 && recipes.map((recipe, i) => (
-          <Card className="flex flex-col flex-1">
+          <Card className="flex flex-col flex-1" key={i}>
             <CardHeader>
               <CardTitle>{recipe.name}</CardTitle>
               <CardDescription>{recipe.description}</CardDescription>
