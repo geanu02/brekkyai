@@ -29,10 +29,10 @@ export default function Home() {
       <div className="flex flex-col items-center">
         <h1 className="text-xl p-4">Brekky AI</h1>
       </div>
-      <div className="flex items-center gap-2 mb-4">
+      <div className="max-w-lg flex flex-row items-center gap-2 mb-4 mx-auto">
         <Input 
           type="text"
-          placeholder="Specify some themes or ingredients"
+          placeholder="Ingredient or themes, separated by comma"
           value={prompt}
           onChange={e => setPrompt(e.target.value)}
         />
