@@ -48,7 +48,7 @@ export default function Home() {
             </CardHeader>
             <CardContent className="flex flex-col flex-1">
               <div className="flex flex-col flex-1 mb-2">
-                <div>Ingredients:</div>
+                <div className="my-2">Ingredients:</div>
                 <div className="bg-slate-100 border border-slate-200 shadow-sm rounded mb-2">
                   <ul className="text-sm list-disc ml-4 p-2">
                     {recipe.ingredients.map((ingredient: string, i: number) => (
@@ -56,11 +56,14 @@ export default function Home() {
                     ))}
                   </ul>
                 </div>
-                <ol className="list-decimal ml-4">
+                <div className="my-2">Instructions:</div>
+                <div className="bg-slate-100 border border-slate-200 shadow-sm rounded mb-2">
+                  <ol className="text-sm list-decimal ml-4 p-2">
                     {recipe.instructions.map((step: string, i: number) => (
                       <li key={i}>{step}</li>
                     ))}
-                </ol>
+                  </ol>
+                </div>
               </div>
               <Button onClick={() => alert("You clicked the button")}>Save</Button>
             </CardContent>
